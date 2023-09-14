@@ -1,12 +1,11 @@
 ﻿#include <iostream>
-#include "windows.h"
-
 #include "functions.h"
+
+char* field;
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    setlocale(LC_ALL, "ru");
-    std::cout << hello();
+    initialize(field);
+    std::cout << hello() << std::endl;
+    std::cout << getStringField(field);
 }
