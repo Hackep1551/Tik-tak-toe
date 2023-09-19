@@ -2,10 +2,11 @@
 #include "functions.h"
 
 char* field;
+std::string userName;
 
 int main()
 {
     initialize(field);
-    std::cout << hello() << std::endl;
-    std::cout << getStringField(field);
+    userName = getUserName();
+    helloUser(userName);
 }

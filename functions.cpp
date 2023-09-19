@@ -2,6 +2,7 @@
 #include <iostream>
 #include "functions.h"
 #include "windows.h"
+#include "conio.h"
 
 std::string getStringField(char* field) {
     std::string stringField = "-------------\n";
@@ -23,6 +24,20 @@ void initialize(char*& field) {
     field = startfield;
 }
 
-std::string hello() {
-	return "Всем привет";
+std::string getUserName() {
+    std::string userName;
+    std::cout << "Введите ваше имя: ";
+    getline(std::cin, userName);
+    return userName;
+}
+
+void helloUser(const std::string& userName) {
+    std::cout << "Приветсвую, " << userName << "!"
+        << std::endl
+        << "Это игра Крестики-колики с ботом!"
+        << std::endl
+        << "Вы готовы?"
+        << std::endl
+        << "Нажмите любую кнопку для продолжения...";
+    _getch();
 }
