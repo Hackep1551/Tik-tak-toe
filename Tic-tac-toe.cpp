@@ -3,17 +3,13 @@
 
 char* field;
 
-struct UsersInfo {
-    std::string botName;
-    std::string userName;
-    char userSymbol;
-    char botSymbol;
-};
+
 
 
 int main()
 {
     UsersInfo usersInfo;
+    usersInfo.botName = "Бот :D";
     initialize(field);
     usersInfo.userName = getUserName();
     system("cls");
@@ -23,4 +19,11 @@ int main()
     system("cls");
     usersInfo.botSymbol = 
         usersInfo.userSymbol == 'X' ? 'O' : 'X';
+    system("cls");
+    if (usersInfo.userSymbol == 'X')
+        getUserTurn(usersInfo, field);
+    for (;;) {
+        getBotTurn(usersInfo, field);
+        getUserTurn(usersInfo, field);
+    }
 }
