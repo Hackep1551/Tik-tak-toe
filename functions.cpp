@@ -41,3 +41,21 @@ void helloUser(const std::string& userName) {
         << "Нажмите любую кнопку для продолжения...";
     _getch();
 }
+
+char getUserSymbol() {
+    char userSymbol;
+    for (;;) {
+        std::cout << "Выберете вашу фигуру для игры"
+            << std::endl
+            << "(X ходит первым)"
+            << std::endl
+            << "X | O\n: ";
+        userSymbol = getchar();
+        if (userSymbol == 'X' ||
+            userSymbol == 'O')
+            break;
+        system("cls");
+        std::cout << "Неверный ввод\n";
+    }
+    return userSymbol;
+}
