@@ -130,4 +130,11 @@ char getWinner(char* field) {
     return '_';
 }
 
+int updateScore(const UsersInfo& usersInfo, char winner) {
+    if (usersInfo.userSymbol == winner)
+        usersInfo.scoreUser + 1;
+    else if (usersInfo.botSymbol == winner)
+        usersInfo.scoreBot + 1;
+    std::cout << std::endl << "¬аш счЄт: " << usersInfo.scoreUser << std::endl << "—чЄт бота: " << usersInfo.scoreBot;
 
+}

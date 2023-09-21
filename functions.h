@@ -6,6 +6,8 @@ struct UsersInfo {
     std::string userName;
     char userSymbol;
     char botSymbol;
+    int scoreBot = 0;
+    int scoreUser = 0;
 };
 
 void initialize(char*& field);
@@ -16,3 +18,5 @@ char getUserSymbol();
 void getUserTurn(const UsersInfo& usersInfo, char* field);
 void getBotTurn(const UsersInfo& usersInfo, char* field);
 char getWinner(char* field);
+int updateScore(const UsersInfo& usersInfo, char winner);
+int getScore(const UsersInfo& usersInfo);
