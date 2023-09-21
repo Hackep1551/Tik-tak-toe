@@ -15,3 +15,4 @@ void helloUser(const std::string& username);
 char getUserSymbol();
 void getUserTurn(const UsersInfo& usersInfo, char* field);
 void getBotTurn(const UsersInfo& usersInfo, char* field);
+char getWinner(char* field);

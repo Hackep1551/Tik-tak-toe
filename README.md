@@ -16,3 +16,5 @@ cd .\tic-tac-toe
 git remote remove origin
 git remote add origin *ссылка на ваш новый репозиторий*
 ```
+
+git@github.com:Hackep1551/Tik-tak-toe.git
